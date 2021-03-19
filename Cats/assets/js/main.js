@@ -12,12 +12,6 @@
 // femmina, o di blu, se maschio. Il colore del fiocco deve essere più tenue 
 // se il gatto è più giovane, più scuro se il gatto è più vecchio.
 
-// Milestone 3
-
-// Creare un nuovo array con prima tutti i gattini femmina e poi tutti i 
-// gattini maschio, inserendo solamente nome e colore e colore e opacità del 
-// fiocco per ogni gatto.
-
 const cats= [
     {
         nome: 'Whiskey',
@@ -51,8 +45,7 @@ const cats= [
     }
 ];
 
-let maschi= [];
-let femmine= [];
+
 
 cats.forEach((item) => {
     if(item.sesso == 'maschio' && item.eta < 10){
@@ -67,3 +60,59 @@ cats.forEach((item) => {
     
     
 });
+
+
+// MILESTONE 3
+// Creare un nuovo array con prima tutti i gattini femmina e poi tutti i 
+// gattini maschio, inserendo solamente nome e colore e colore e opacità del 
+// fiocco per ogni gatto.
+let maschi= [];
+let femmine= [];
+cats.filter((element)=>{
+    if(element.sesso == 'femmina'){
+        femmine.push(`${element.nome} è di colore  ${element.colore}`)
+    }else{
+        maschi.push(`${element.nome} è di colore  ${element.colore}`)
+    }
+});
+
+console.log(femmine, maschi);
+
+for (let i = 0; i < femmine.length; i++) {
+    console.log(femmine[i])
+    const template = $('.template li').clone();
+    $('.cats-m3.femmine').append(template);
+    template.children('i.black').mouseenter(function(){
+        
+        for (let j = 0; j < femmine[i].length; j++) {
+            $(this).siblings().show();
+            $(this).siblings().text(femmine[i])
+            
+        }
+        $('.cats-m3 i').mouseleave(()=>{
+            $('.info').hide();
+        })
+    })
+}
+
+for (let i = 0; i < maschi.length; i++) {
+    const template = $('.template li').clone();
+    $('.cats-m3.maschi').append(template);
+    template.children('i.black').mouseenter(function(){
+        
+        for (let j = 0; j < maschi[i].length; j++) {
+            $(this).siblings().show();
+            $(this).siblings().text(maschi[i])
+            
+        }
+        $('.cats-m3 i').mouseleave(()=>{
+            $('.info').hide();
+        })
+    })
+}
+
+
+    
+    
+
+
