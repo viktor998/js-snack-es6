@@ -41,13 +41,18 @@ ul.cats-m3 li i:hover .info{
 } 
 
 .info{
-    width: 100px;
+    width: 140px;
     height: 100px;
     position: absolute;
     top: -100px;
-    left: 50px;
+    left: 10px;
     border-radius: 10px;
     background-color: black;
     color: white;
     display: none;
+}
+
+.info p{
+    font-size: 17px;
+    margin-left: 13px;
 }

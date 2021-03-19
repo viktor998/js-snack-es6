@@ -70,9 +70,9 @@ let maschi= [];
 let femmine= [];
 cats.filter((element)=>{
     if(element.sesso == 'femmina'){
-        femmine.push(`${element.nome} è di colore  ${element.colore}`)
+        femmine.push(`nome : ${element.nome}  colore  : ${element.colore}`)
     }else{
-        maschi.push(`${element.nome} è di colore  ${element.colore}`)
+        maschi.push(`nome : ${element.nome}  colore  : ${element.colore}`)
     }
 });
 
@@ -86,7 +86,7 @@ for (let i = 0; i < femmine.length; i++) {
         
         for (let j = 0; j < femmine[i].length; j++) {
             $(this).siblings().show();
-            $(this).siblings().text(femmine[i])
+            $(this).siblings().html('<p>'+femmine[i]+'</p>')
             
         }
         $('.cats-m3 i').mouseleave(()=>{
@@ -102,7 +102,7 @@ for (let i = 0; i < maschi.length; i++) {
         
         for (let j = 0; j < maschi[i].length; j++) {
             $(this).siblings().show();
-            $(this).siblings().text(maschi[i])
+            $(this).siblings().html('<p>'+maschi[i]+'</p>')
             
         }
         $('.cats-m3 i').mouseleave(()=>{
