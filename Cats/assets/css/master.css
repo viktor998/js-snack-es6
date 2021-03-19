@@ -1,0 +1,20 @@
+.fas.fa-cat{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.blue.fas.fa-cat{
+    color: rgb(81, 171, 255);
+}
+
+.blue-scuro.fas.fa-cat{
+    color: rgb(0, 68, 131);
+}
+
+.pink.fas.fa-cat{
+    color: pink;
+}
+
+.pink-scuro.fas.fa-cat{
+    color: rgb(255, 77, 106);
+}

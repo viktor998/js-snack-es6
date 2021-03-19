@@ -17,33 +17,25 @@ const falliSubiti = 'falli';
 randomGen();
 
 for (let i = 0; i < nome.length; i++) {
-    // let nomeS = 'nomeSquadra';
-    // let falliS = 'falliSquadra'
     const squadraCalcio={
         [nomeSquadra] : nome[i],
         [puntiFatti] : punti[i],
         [falliSubiti] : falli[i]
     };
 
-    var nomeS = squadraCalcio.nome;
-    var falliS = squadraCalcio.falli;
-    console.log(nomeS, falliS);
-    // arrayCompleto.push(squadraCalcio);
+    // var nomeS = squadraCalcio.nome;
+    // var falliS = squadraCalcio.falli;
+    // console.log(nomeS, falliS);
+    arrayCompleto.push(squadraCalcio);
+
+    const {nome: nomeS, falli: falliS}= squadraCalcio;
+    console.log(`La squadra ${nomeS} ha subito  ${falliS} falli`);
+    
 }
 
-// for (var i = 0; i < arrayCompleto.length; i++) {
-//     console.log(arrayCompleto[i])
- 
-//     for (var j = 0; j < arrayCompleto[i].length; j++) {
-//         var {nomeC, falliC} = arrayCompleto;
-        
-        
-        
-//     }
-//     console.log(nomeC, falliC);
-    
-// }
 
+
+console.log(arrayCompleto);
 
 function randomGen(){
     for (let i = 0; i < nome.length; i++) {
